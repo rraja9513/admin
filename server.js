@@ -12,10 +12,8 @@ const connection=mongoose.connection;
 connection.once('open',()=>{
     console.log("Atlas started successfully")
 })
-const upperRouter=require('./Routes/upper');
-const lowerRouter=require('./Routes/lower');
-app.use('/upper',upperRouter);
-app.use('/lower',lowerRouter);
+const exerciseRouter=require('./Routes/exercise')
+app.use('/exercise',exerciseRouter);
 app.listen(port,function(){
     console.log("Server started Successfully");
 });
